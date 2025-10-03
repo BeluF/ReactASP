@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -45,13 +46,57 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  text-align: center;
+
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.estadoP {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  background-color: black;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+
+}
+
+.estadoP.estado-ganador {
+  opacity: 1;
+  border-width: 0.1em;
+  box-shadow:
+    0 0 5px rgb(106, 106, 228),
+    0 0 15px rgb(106, 106, 228),
+    0 0 30px rgb(106, 106, 228),
+    0 0 45px rgb(106, 106, 228),
+    0 0 60px rgb(106, 106, 228);
+
+}
+
+.cuadrado {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  margin: 2px;
+  height: 2.5em;
+  min-width: 3em;
+  margin: 0.1em 0.2em 0.1em 0.2em;
+
+}
+
+.cuadrado.ganador {
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+  border: 2px solid orange;
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,10 +104,28 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 500px) {
+  .juego {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+@media (max-width: 501px) {
+  .juego {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
   }
 }
